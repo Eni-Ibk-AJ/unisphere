@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UNISPHERE - Upcoming Events</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="min-h-screen flex flex-col bg-gray-50">
+
+  <header id="navbar-header" class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm transition-all duration-300">
+    <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <a href="index.html" class="flex items-center gap-2">
+          <div class="w-8 h-8 bg-emerald-600 rounded-lg flex items-center justify-center"><i class="fa-solid fa-leaf text-white text-sm"></i></div>
+          <span class="text-gray-900 text-xl font-bold tracking-tight">UNISPHERE</span>
+        </a>
+        <ul class="hidden md:flex items-center gap-1">
+          <li><a href="index.html" class="px-4 py-2 rounded-lg text-sm font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-50">Home</a></li>
+          <li><a href="about.html" class="px-4 py-2 rounded-lg text-sm font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-50">About</a></li>
+          <li><a href="gallery.html" class="px-4 py-2 rounded-lg text-sm font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-50">Gallery</a></li>
+          <li><a href="events.html" class="px-4 py-2 rounded-lg text-sm font-medium bg-emerald-50 text-emerald-700">Events</a></li>
+          <li><a href="feedback.html" class="px-4 py-2 rounded-lg text-sm font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-50">Feedback</a></li>
+          <li><a href="contact.html" class="px-4 py-2 rounded-lg text-sm font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-50">Contact</a></li>
+        </ul>
+        <button id="menu-btn" class="md:hidden p-2 rounded-lg text-gray-600 hover:text-gray-900 hover:bg-gray-100 transition-colors"><i id="menu-icon" class="fa-solid fa-bars text-xl"></i></button>
+      </div>
+    </nav>
+    <div id="mobile-menu" class="hidden md:hidden overflow-hidden bg-white border-t border-gray-100 px-4 py-3 space-y-1">
+      <a href="index.html" class="block px-4 py-2.5 rounded-lg text-sm font-medium text-gray-600 hover:text-gray-900">Home</a>
+      <a href="about.html" class="block px-4 py-2.5 rounded-lg text-sm font-medium text-gray-600 hover:text-gray-900">About</a>
+      <a href="gallery.html" class="block px-4 py-2.5 rounded-lg text-sm font-medium text-gray-600 hover:text-gray-900">Gallery</a>
+      <a href="events.html" class="block px-4 py-2.5 rounded-lg text-sm font-medium bg-emerald-50 text-emerald-700">Events</a>
+      <a href="feedback.html" class="block px-4 py-2.5 rounded-lg text-sm font-medium text-gray-600 hover:text-gray-900">Feedback</a>
+      <a href="contact.html" class="block px-4 py-2.5 rounded-lg text-sm font-medium text-gray-600 hover:text-gray-900">Contact</a>
+    </div>
+  </header>
+
+  <main class="pt-16 flex-1">
+    <section class="py-20 bg-gray-900 text-center">
+      <h1 class="text-5xl font-bold text-white mb-4">Upcoming Events</h1>
+      <p class="text-gray-400 max-w-xl mx-auto">Don't miss out! Check out the list of schedules, gala nights, and hands-on workshops tailored for you.</p>
+    </section>
+
+    <section class="py-20 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="space-y-10">
+        
+        <article class="bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-md transition-shadow flex flex-col md:flex-row min-h-[280px]">
+          <div class="md:w-2/5 relative h-52 md:h-auto bg-gray-100">
+            <img src="https://images.pexels.com/photos/1190297/pexels-photo-1190297.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Gala" class="w-full h-full object-cover">
+            <span class="absolute top-4 left-4 px-3 py-1 bg-white/90 backdrop-blur-sm text-gray-900 text-xs font-bold rounded-lg shadow-sm">Gala</span>
+          </div>
+          <div class="p-6 md:p-8 flex-1 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center gap-2 text-emerald-600 text-xs font-bold tracking-wide uppercase mb-2">
+                <i class="fa-solid fa-calendar"></i> June 15, 2026
+              </div>
+              <h2 class="text-2xl font-bold text-gray-900 mb-3">Annual Community Gala</h2>
+              <p class="text-gray-500 text-sm leading-relaxed mb-5">Our flagship annual event celebrating community achievements, featuring live music, awards, and a gourmet dinner.</p>
+              <div class="flex flex-wrap gap-x-5 gap-y-2 text-xs text-gray-400 font-medium mb-5 border-t border-gray-50 pt-4">
+                <span class="flex items-center gap-1.5"><i class="fa-solid fa-clock text-emerald-500"></i>6:00 PM – 10:00 PM</span>
+                <span class="flex items-center gap-1.5"><i class="fa-solid fa-map-pin text-emerald-500"></i>D'Podium International Event Centre, Ikeja</span>
+                <span class="flex items-center gap-1.5"><i class="fa-solid fa-users text-emerald-500"></i>200 / 250 attending</span>
+              </div>
+              <div class="mb-4">
+                <div class="flex justify-between text-xs text-gray-400 mb-1"><span>Capacity</span><span>80% full</span></div>
+                <div class="h-2 bg-gray-100 rounded-full overflow-hidden"><div class="h-full rounded-full bg-emerald-500" style="width: 80%"></div></div>
+              </div>
+            </div>
+            <div><button class="inline-flex items-center gap-2 px-6 py-2.5 bg-emerald-600 hover:bg-emerald-700 text-white text-sm font-semibold rounded-xl transition-colors">Register Now <i class="fa-solid fa-arrow-right text-xs"></i></button></div>
+          </div>
+        </article>
+
+        <article class="bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-md transition-shadow flex flex-col md:flex-row min-h-[280px]">
+          <div class="md:w-2/5 relative h-52 md:h-auto bg-gray-100">
+            <img src="https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Workshop" class="w-full h-full object-cover">
+            <span class="absolute top-4 left-4 px-3 py-1 bg-white/90 backdrop-blur-sm text-gray-900 text-xs font-bold rounded-lg shadow-sm">Workshop</span>
+          </div>
+          <div class="p-6 md:p-8 flex-1 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center gap-2 text-emerald-600 text-xs font-bold tracking-wide uppercase mb-2">
+                <i class="fa-solid fa-calendar"></i> July 8, 2026
+              </div>
+              <h2 class="text-2xl font-bold text-gray-900 mb-3">Summer Outdoor Workshop</h2>
+              <p class="text-gray-500 text-sm leading-relaxed mb-5">An interactive skills workshop held outdoors. Learn, collaborate, and enjoy the summer weather with fellow members.</p>
+              <div class="flex flex-wrap gap-x-5 gap-y-2 text-xs text-gray-400 font-medium mb-5 border-t border-gray-50 pt-4">
+                <span class="flex items-center gap-1.5"><i class="fa-solid fa-clock text-emerald-500"></i>10:00 AM – 2:00 PM</span>
+                <span class="flex items-center gap-1.5"><i class="fa-solid fa-map-pin text-emerald-500"></i>Johnson Jakande Tinubu Park, Ikeja</span>
+                <span class="flex items-center gap-1.5"><i class="fa-solid fa-users text-emerald-500"></i>45 / 60 attending</span>
+              </div>
+              <div class="mb-4">
+                <div class="flex justify-between text-xs text-gray-400 mb-1"><span>Capacity</span><span>75% full</span></div>
+                <div class="h-2 bg-gray-100 rounded-full overflow-hidden"><div class="h-full rounded-full bg-emerald-500" style="width: 75%"></div></div>
+              </div>
+            </div>
+            <div><button class="inline-flex items-center gap-2 px-6 py-2.5 bg-emerald-600 hover:bg-emerald-700 text-white text-sm font-semibold rounded-xl transition-colors">Register Now <i class="fa-solid fa-arrow-right text-xs"></i></button></div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-gray-900 text-gray-300">
+    <div class="max-w-7xl mx-auto px-4 py-14 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-3 gap-10">
+        <div>
+          <span class="text-white text-xl font-bold">UNISPHERE</span>
+          <p class="text-sm text-gray-400 mt-2">Your gateway to college events, culture, and community.</p>
+        </div>
+        <div>
+          <h3 class="text-white font-semibold text-sm mb-4">Quick Links</h3>
+          <ul class="space-y-2 text-sm">
+            <li><a href="index.html" class="hover:text-white">Home</a></li>
+            <li><a href="about.html" class="hover:text-white">About</a></li>
+            <li><a href="gallery.html" class="hover:text-white">Gallery</a></li>
+            <li><a href="events.html" class="text-emerald-400">Events</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+  </script>
+</body>
+</html>

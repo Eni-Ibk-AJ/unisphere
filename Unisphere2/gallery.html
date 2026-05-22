@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UNISPHERE - Gallery</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="min-h-screen flex flex-col bg-gray-50">
+
+  <header id="navbar-header" class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm transition-all duration-300">
+    <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <a href="index.html" class="flex items-center gap-2">
+          <div class="w-8 h-8 bg-emerald-600 rounded-lg flex items-center justify-center"><i class="fa-solid fa-leaf text-white text-sm"></i></div>
+          <span class="text-gray-900 text-xl font-bold tracking-tight">UNISPHERE</span>
+        </a>
+        <ul class="hidden md:flex items-center gap-1">
+          <li><a href="index.html" class="px-4 py-2 rounded-lg text-sm font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-50">Home</a></li>
+          <li><a href="about.html" class="px-4 py-2 rounded-lg text-sm font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-50">About</a></li>
+          <li><a href="gallery.html" class="px-4 py-2 rounded-lg text-sm font-medium bg-emerald-50 text-emerald-700">Gallery</a></li>
+          <li><a href="events.html" class="px-4 py-2 rounded-lg text-sm font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-50">Events</a></li>
+          <li><a href="feedback.html" class="px-4 py-2 rounded-lg text-sm font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-50">Feedback</a></li>
+          <li><a href="contact.html" class="px-4 py-2 rounded-lg text-sm font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-50">Contact</a></li>
+        </ul>
+        <button id="menu-btn" class="md:hidden p-2 rounded-lg text-gray-600 hover:text-gray-900 hover:bg-gray-100 transition-colors"><i id="menu-icon" class="fa-solid fa-bars text-xl"></i></button>
+      </div>
+    </nav>
+    <div id="mobile-menu" class="hidden md:hidden overflow-hidden bg-white border-t border-gray-100 px-4 py-3 space-y-1">
+      <a href="index.html" class="block px-4 py-2.5 rounded-lg text-sm font-medium text-gray-600 hover:text-gray-900">Home</a>
+      <a href="about.html" class="block px-4 py-2.5 rounded-lg text-sm font-medium text-gray-600 hover:text-gray-900">About</a>
+      <a href="gallery.html" class="block px-4 py-2.5 rounded-lg text-sm font-medium bg-emerald-50 text-emerald-700">Gallery</a>
+      <a href="events.html" class="block px-4 py-2.5 rounded-lg text-sm font-medium text-gray-600 hover:text-gray-900">Events</a>
+      <a href="feedback.html" class="block px-4 py-2.5 rounded-lg text-sm font-medium text-gray-600 hover:text-gray-900">Feedback</a>
+      <a href="contact.html" class="block px-4 py-2.5 rounded-lg text-sm font-medium text-gray-600 hover:text-gray-900">Contact</a>
+    </div>
+  </header>
+
+  <main class="pt-16 flex-1">
+    <section class="py-20 bg-gray-900 text-center">
+      <h1 class="text-5xl font-bold text-white mb-4">Our Gallery</h1>
+      <p class="text-gray-400 max-w-xl mx-auto">Take a visual tour through memorable student interactions, outdoor workshops, and community events.</p>
+    </section>
+
+    <section class="py-16 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div id="filter-container" class="flex flex-wrap justify-center gap-2 mb-12">
+          <button class="filter-tab px-5 py-2 rounded-xl text-sm font-semibold transition-all shadow-sm bg-emerald-600 text-white" data-category="All">All</button>
+          <button class="filter-tab px-5 py-2 rounded-xl text-sm font-semibold transition-all shadow-sm bg-gray-50 text-gray-600 hover:bg-gray-100" data-category="Events">Events</button>
+          <button class="filter-tab px-5 py-2 rounded-xl text-sm font-semibold transition-all shadow-sm bg-gray-50 text-gray-600 hover:bg-gray-100" data-category="Community">Community</button>
+          <button class="filter-tab px-5 py-2 rounded-xl text-sm font-semibold transition-all shadow-sm bg-gray-50 text-gray-600 hover:bg-gray-100" data-category="Nature">Nature</button>
+          <button class="filter-tab px-5 py-2 rounded-xl text-sm font-semibold transition-all shadow-sm bg-gray-50 text-gray-600 hover:bg-gray-100" data-category="Workshops">Workshops</button>
+        </div>
+
+        <div id="gallery-grid" class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+          <div class="gallery-item group relative aspect-square bg-gray-100 rounded-2xl overflow-hidden cursor-pointer shadow-sm hover:shadow-md transition-shadow" data-cat="Events" data-src="https://images.pexels.com/photos/1190297/pexels-photo-1190297.jpeg?auto=compress&cs=tinysrgb&w=800" data-caption="Annual Gathering 2024">
+            <img src="https://images.pexels.com/photos/1190297/pexels-photo-1190297.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Annual Gathering" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center"><div class="w-10 h-10 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center text-white"><i class="fa-solid fa-magnifying-glass-plus"></i></div></div>
+            <div class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/60 to-transparent translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+              <p class="text-white text-sm font-medium">Annual Gathering 2024</p>
+              <p class="text-emerald-300 text-xs">Events</p>
+            </div>
+          </div>
+          <div class="gallery-item group relative aspect-square bg-gray-100 rounded-2xl overflow-hidden cursor-pointer shadow-sm hover:shadow-md transition-shadow" data-cat="Community" data-src="https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=800" data-caption="Team Planning Session">
+            <img src="https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Planning Session" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center"><div class="w-10 h-10 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center text-white"><i class="fa-solid fa-magnifying-glass-plus"></i></div></div>
+            <div class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/60 to-transparent translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+              <p class="text-white text-sm font-medium">Team Planning Session</p>
+              <p class="text-emerald-300 text-xs">Community</p>
+            </div>
+          </div>
+          <div class="gallery-item group relative aspect-square bg-gray-100 rounded-2xl overflow-hidden cursor-pointer shadow-sm hover:shadow-md transition-shadow" data-cat="Events" data-src="https://images.pexels.com/photos/1105666/pexels-photo-1105666.jpeg?auto=compress&cs=tinysrgb&w=800" data-caption="Summer Festival">
+            <img src="https://images.pexels.com/photos/1105666/pexels-photo-1105666.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Summer Festival" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center"><div class="w-10 h-10 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center text-white"><i class="fa-solid fa-magnifying-glass-plus"></i></div></div>
+            <div class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/60 to-transparent translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+              <p class="text-white text-sm font-medium">Summer Festival</p>
+              <p class="text-emerald-300 text-xs">Events</p>
+            </div>
+          </div>
+          <div class="gallery-item group relative aspect-square bg-gray-100 rounded-2xl overflow-hidden cursor-pointer shadow-sm hover:shadow-md transition-shadow" data-cat="Workshops" data-src="https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=800" data-caption="Leadership Workshop">
+            <img src="https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Leadership Workshop" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center"><div class="w-10 h-10 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center text-white"><i class="fa-solid fa-magnifying-glass-plus"></i></div></div>
+            <div class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/60 to-transparent translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+              <p class="text-white text-sm font-medium">Leadership Workshop</p>
+              <p class="text-emerald-300 text-xs">Workshops</p>
+            </div>
+          </div>
+          <div class="gallery-item group relative aspect-square bg-gray-100 rounded-2xl overflow-hidden cursor-pointer shadow-sm hover:shadow-md transition-shadow" data-cat="Nature" data-src="https://images.pexels.com/photos/1586298/pexels-photo-1586298.jpeg?auto=compress&cs=tinysrgb&w=800" data-caption="Nature Walk">
+            <img src="https://images.pexels.com/photos/1586298/pexels-photo-1586298.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Nature Walk" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center"><div class="w-10 h-10 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center text-white"><i class="fa-solid fa-magnifying-glass-plus"></i></div></div>
+            <div class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/60 to-transparent translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+              <p class="text-white text-sm font-medium">Nature Walk</p>
+              <p class="text-emerald-300 text-xs">Nature</p>
+            </div>
+          </div>
+          <div class="gallery-item group relative aspect-square bg-gray-100 rounded-2xl overflow-hidden cursor-pointer shadow-sm hover:shadow-md transition-shadow" data-cat="Community" data-src="https://images.pexels.com/photos/2608517/pexels-photo-2608517.jpeg?auto=compress&cs=tinysrgb&w=800" data-caption="Community Breakfast">
+            <img src="https://images.pexels.com/photos/2608517/pexels-photo-2608517.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Breakfast" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center"><div class="w-10 h-10 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center text-white"><i class="fa-solid fa-magnifying-glass-plus"></i></div></div>
+            <div class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/60 to-transparent translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+              <p class="text-white text-sm font-medium">Community Breakfast</p>
+              <p class="text-emerald-300 text-xs">Community</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="lightbox" class="fixed inset-0 z-50 bg-black/90 hidden flex flex-col items-center justify-center p-4">
+    <button id="close-lightbox" class="absolute top-4 right-4 w-10 h-10 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center text-white transition-colors">
+      <i class="fa-solid fa-xmark text-lg"></i>
+    </button>
+    <div class="max-w-4xl max-h-[85vh] w-full">
+      <img id="lightbox-img" src="" alt="" class="w-full h-full object-contain rounded-xl mx-auto">
+      <div class="mt-3 text-center">
+        <p id="lightbox-caption" class="text-white font-medium"></p>
+        <p id="lightbox-cat" class="text-emerald-400 text-sm"></p>
+      </div>
+    </div>
+  </div>
+
+  <footer class="bg-gray-900 text-gray-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+        <div>
+          <div class="flex items-center gap-2 mb-4">
+            <div class="w-8 h-8 bg-emerald-600 rounded-lg flex items-center justify-center"><i class="fa-solid fa-leaf text-white"></i></div>
+            <span class="text-white text-xl font-bold tracking-tight">UNISPHERE</span>
+          </div>
+          <p class="text-sm leading-relaxed text-gray-400 mb-5">Your gateway to college events, culture, and community.</p>
+        </div>
+        <div>
+          <h3 class="text-white font-semibold mb-4 text-sm uppercase tracking-wider">Quick Links</h3>
+          <ul class="space-y-2.5 text-sm">
+            <li><a href="index.html" class="hover:text-white">Home</a></li>
+            <li><a href="about.html" class="hover:text-white">About</a></li>
+            <li><a href="gallery.html" class="text-emerald-400">Gallery</a></li>
+            <li><a href="events.html" class="hover:text-white">Events</a></li>
+            <li><a href="feedback.html" class="hover:text-white">Feedback</a></li>
+            <li><a href="contact.html" class="hover:text-white">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-white font-semibold mb-4 text-sm uppercase tracking-wider">Contact</h3>
+          <ul class="space-y-3">
+            <li class="flex items-start gap-3"><i class="fa-solid fa-map-pin text-emerald-500 mt-0.5 shrink-0"></i><span class="text-sm text-gray-400">Aptech Maryland Center, 332 Capital Building, Maryland, Lagos</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Responsive Navbar Control
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+
+    // Category Tabs Logic
+    const tabs = document.querySelectorAll('.filter-tab');
+    const items = document.querySelectorAll('.gallery-item');
+
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        tabs.forEach(t => {
+          t.className = "filter-tab px-5 py-2 rounded-xl text-sm font-semibold transition-all shadow-sm bg-gray-50 text-gray-600 hover:bg-gray-100";
+        });
+        tab.className = "filter-tab px-5 py-2 rounded-xl text-sm font-semibold transition-all shadow-sm bg-emerald-600 text-white";
+
+        const category = tab.getAttribute('data-category');
+        items.forEach(item => {
+          if (category === 'All' || item.getAttribute('data-cat') === category) {
+            item.classList.remove('hidden');
+          } else {
+            item.classList.add('hidden');
+          }
+        });
+      });
+    });
+
+    // Lightbox Modal Mechanism
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const lightboxCaption = document.getElementById('lightbox-caption');
+    const lightboxCat = document.getElementById('lightbox-cat');
+    const closeLightbox = document.getElementById('close-lightbox');
+
+    items.forEach(item => {
+      item.addEventListener('click', () => {
+        lightboxImg.src = item.getAttribute('data-src');
+        lightboxCaption.textContent = item.getAttribute('data-caption');
+        lightboxCat.textContent = item.getAttribute('data-cat');
+        lightbox.classList.remove('hidden');
+      });
+    });
+
+    closeLightbox.addEventListener('click', () => lightbox.classList.add('hidden'));
+    lightbox.addEventListener('click', () => lightbox.classList.add('hidden'));
+    lightboxImg.addEventListener('click', (e) => e.stopPropagation());
+  </script>
+</body>
+</html>
